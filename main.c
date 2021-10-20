@@ -4,8 +4,8 @@ int main(void)
 {
     char digit;
     int alpha;
-
     digit = '5';
+    
     alpha = 'e';
     printf ("ft_isalpha %d\t", ft_isalpha(alpha));
     printf ("isalpha %d\n", isalpha(alpha));
