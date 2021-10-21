@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include <ctype.h>
-int ft_isdigit(int c);
-
+#include "libft.h"
+/*
 int main(void)
 {
     char digit;
@@ -11,7 +9,7 @@ int main(void)
     printf ("%d", isdigit(digit));
     return (0);
 }
-
+*/
 int ft_isdigit(int c)
 {
     if (c >= '0' && c <= '9')

@@ -9,8 +9,8 @@ int main(void)
     unsigned char print;
     char s[20] = "Codam";
     char w[20] = "Codam";
-    const char src_mm[25] = "Don't Panic dude";
-    const char src2_mm[25] = "Don't Panic";
+    char src_mm[25] = "Don't Panic";
+    char src2_mm[25] = "Don't Panic";
     char dst_mm[50];
     char dst2_mm[50];
     const char *str;
@@ -18,13 +18,15 @@ int main(void)
     int letter_l;
     char src[20] = "Codam";
     char dst[50];
+    char src_1[20] = "Codam";
+    char dst_1[50];
     size_t n;
     char dest[8] = {0, 0, 0, 0, 0};
+    char dest_2[8] = {0, 0, 0, 0, 0};
     const char sorc[25] = "Party-time";
     size_t len;
     size_t dstsize;
     
-
     num = 2;
     digit = '5';
     alpha = 'e';
@@ -33,7 +35,7 @@ int main(void)
     str = "Galaxy";
     letter_u = 'e';
     letter_l = 'E';
-    n = sizeof(src);
+    n = ft_strlen(src);
     len = 0;
     dstsize = sizeof(dest);
     printf ("ft_isalpha %d\t", ft_isalpha(alpha));
@@ -58,10 +60,11 @@ int main(void)
     printf ("toupper %c\n", toupper(letter_u));
     printf ("ft_tolower %c\t", ft_tolower(letter_l));
     printf ("tolower %c\n", tolower(letter_l));
-    printf ("ft_memcpy %s \n%s\n", src, ft_memcpy(dst, src, n));
-    printf ("memcpy %s \n%s\n", src, memcpy(dst, src, n));
-    printf("ft_memmove %s", ft_memmove(src_mm + 2, src_mm, 5));
-    printf("memmove %s", memmove(src2_mm + 2, src2_mm, 5));
-    printf("ft_strlcpy  %s \t %lu", dest, ft_strlcpy(dest, sorc, dstsize));
+    printf ("ft_memcpy %s\t%s\t", dst, ft_memcpy(dst, src, n));
+    printf ("memcpy %s\t%s\n", dst_1, memcpy(dst_1, src_1, n));
+    printf("ft_memmove %s\t", ft_memmove(dst_mm, src_mm, 10));
+    printf("memmove %s\n", memmove(dst2_mm, src2_mm, 10));
+    printf("ft_strlcpy %s %lu\t", dest, ft_strlcpy(dest, sorc, dstsize));
+    printf("strlcpy %s %lu\n", dest_2, ft_strlcpy(dest_2, sorc, dstsize));
     return (0);
 }

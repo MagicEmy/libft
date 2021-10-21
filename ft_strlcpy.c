@@ -1,5 +1,9 @@
+/*
 #include <string.h>
 #include <stdio.h>
+*/
+#include "libft.h"
+/*
 size_t  ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 
@@ -15,7 +19,7 @@ int main(void)
     printf("%s \t %lu", dst, ft_strlcpy(dst, src, 0));
     return (0);
 }
-
+*/
 size_t  ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
 {
     
@@ -39,7 +43,7 @@ size_t  ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsiz
     }
     return (len);
 }
-
+/*
 void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
     const char *s;
@@ -53,3 +57,4 @@ void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
     }
     return (dst);
 }
+*/

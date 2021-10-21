@@ -6,11 +6,11 @@ size_t  ft_strlen(const char *s);
 
 int main(void)
 {
-    const char *s;
+    const char *str;
     
-    s = "Galaxy";
-    printf ("%lu", ft_strlen(s));
-    printf ("%lu", strlen(s));
+    str = "Galaxy";
+    printf ("%lu", ft_strlen(str));
+    printf ("%lu", strlen(str));
     return (0);
 }
 */

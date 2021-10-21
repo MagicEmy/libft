@@ -1,8 +1,8 @@
-/*
 #include <stdio.h>
 #include <ctype.h>
+#include "libft.h"
 int ft_isalpha(int c);
-
+/*
 int main(void)
 {
     int alpha;

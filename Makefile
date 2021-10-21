@@ -1,6 +1,18 @@
 NAME := libft.a
 HEADERS := libft.h
-SRC := ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c
+SRC := 	ft_bzero.c \
+		ft_isalnum.c \
+		ft_isalpha.c \
+		ft_isascii.c \
+		ft_isdigit.c \
+		ft_isprint.c \
+		ft_strlen.c  \
+		ft_tolower.c \
+		ft_toupper.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_strlcpy.c
+
 OBJ	:= $(SRC:.c=.o)
 CC := gcc
 CFLAGS := -Wall -Wextra -Werror
@@ -9,7 +21,7 @@ RED :=$("\033[0;31m")
 YELLOW :=$("\033[0;33m")
 END :=$("\033[0m")
 
-.SUFFIXES: .c .o
+SUFFIXES: .c .o
 
 .PHONY: all
 all: $(NAME)
@@ -18,8 +30,8 @@ $(NAME): $(OBJ) $(HEADERS)
 	$(LIBC) $(NAME) $(OBJ) 
 
 exec: $(NAME)
-	$(CC) $(CFLAGS) -o libft main.c -lft -L. -I
-	./libft 
+	$(CC) $(CFLAGS) -o $(NAME) main.c -lft -L. -I
+	./$(NAME)
 
 %.o: %.c 
 	$(CC) $(CFLAGS) -o $@ -c $<

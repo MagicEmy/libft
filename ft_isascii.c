@@ -1,3 +1,5 @@
+#include "libft.h"
+/*
 #include <stdio.h>
 #include <ctype.h>
 int ft_isascii(int c);
@@ -11,7 +13,7 @@ int main(void)
     printf ("%d", isascii(ascii));
     return (0);
 }
-
+*/
 int ft_isascii(int c)
 {
     if (c >= 0 && c <= 127)
