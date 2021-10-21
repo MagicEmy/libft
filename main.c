@@ -26,6 +26,8 @@ int main(void)
     const char sorc[25] = "Party-time";
     size_t len;
     size_t dstsize;
+    int c;
+    const char *s_strchr;
     
     num = 2;
     digit = '5';
@@ -38,6 +40,8 @@ int main(void)
     n = ft_strlen(src);
     len = 0;
     dstsize = sizeof(dest);
+    c = 'u';
+    s_strchr = "Bibuba";
     printf ("ft_isalpha %d\t", ft_isalpha(alpha));
     printf ("isalpha %d\n", isalpha(alpha));
     printf ("ft_isdigit %d\t", ft_isdigit(digit));
@@ -66,5 +70,7 @@ int main(void)
     printf("memmove %s\n", memmove(dst2_mm, src2_mm, 10));
     printf("ft_strlcpy %s %lu\t", dest, ft_strlcpy(dest, sorc, dstsize));
     printf("strlcpy %s %lu\n", dest_2, ft_strlcpy(dest_2, sorc, dstsize));
+    printf("ft_strchr %s\t", ft_strchr(s_strchr, c));
+    printf("strchr %s\n", strchr(s_strchr, c));
     return (0);
 }
