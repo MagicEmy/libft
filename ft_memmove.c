@@ -31,7 +31,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     s = (char *)src;
     d = (char *)dst;
     max = len;
-    if (!s || !d)
+    if (!src && !dst)
         return (NULL);
     if (d < s)
     {

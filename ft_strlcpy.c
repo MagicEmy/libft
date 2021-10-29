@@ -27,11 +27,14 @@ size_t  ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsiz
     const char *s = src;
     size_t len;
     
+    len = ft_strlen(s);
+    /*
     len = 0;
     while (s[len])
     {
         len++;        
     }
+    */
     if (len + 1 < dstsize)
     {
         ft_memcpy(dst, src, len + 1);

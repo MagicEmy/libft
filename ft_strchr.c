@@ -32,12 +32,16 @@ char    *ft_strchr(const char *s, int c)
 
     i = 0;
     string = (char *)s;
-    while (string[i++])
+
+    while (string[i])
     {
         if (string[i] == c)
         {
             return (string + i);
         }
+        i++;
     }
+    if (c == '\0')
+        return (string + i);
     return (NULL);
 }

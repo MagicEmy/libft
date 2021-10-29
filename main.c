@@ -18,7 +18,7 @@ int main(void)
     int letter_l;
     char src[20] = "Codam";
     char dst[50];
-    char src_1[20] = "Codam";
+//    char src_1[20] = "Codam";
     char dst_1[50];
     size_t n;
     char dest[8] = {0, 0, 0, 0, 0};
@@ -64,8 +64,8 @@ int main(void)
     printf ("toupper %c\n", toupper(letter_u));
     printf ("ft_tolower %c\t", ft_tolower(letter_l));
     printf ("tolower %c\n", tolower(letter_l));
-    printf ("ft_memcpy %s\t%s\t", dst, ft_memcpy(dst, src, n));
-    printf ("memcpy %s\t%s\n", dst_1, memcpy(dst_1, src_1, n));
+    printf ("ft_memcpy %s\t%s\t", dst, ft_memcpy(((void *)0), ((void *)0), 3));
+    printf ("memcpy %s\t%s\n", dst_1, memcpy(((void *)0), ((void *)0), 3));
     printf("ft_memmove %s\t", ft_memmove(dst_mm, src_mm, 10));
     printf("memmove %s\n", memmove(dst2_mm, src2_mm, 10));
     printf("ft_strlcpy %s %lu\t", dest, ft_strlcpy(dest, sorc, dstsize));

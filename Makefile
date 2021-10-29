@@ -14,7 +14,6 @@ SRC := 	ft_bzero.c 	 \
 		ft_strlcpy.c \
 		ft_strchr.c
 
-
 OBJ	:= $(SRC:.c=.o)
 CC := gcc
 CFLAGS := -Wall -Wextra -Werror
