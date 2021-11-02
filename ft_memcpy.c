@@ -30,7 +30,7 @@ void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
     
     s = src;
     d = dst;
-    if (src ==  NULL && dst == NULL)
+    if (!src && dst == NULL)
         return (NULL);
     while (n--)
     {

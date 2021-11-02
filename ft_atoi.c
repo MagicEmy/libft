@@ -4,11 +4,11 @@
 */
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	int	number;
-	int	sign;
-	int	i;
+	int		number;
+	int		sign;
+	int		i;
 
 	number = 0;
 	sign = 1;
@@ -28,6 +28,7 @@ int	ft_atoi(char *str)
 	}
 	return (number * sign);
 }
+
 /*
 int	main(void)
 {
@@ -39,4 +40,5 @@ int	main(void)
 	printf("%d\n", numeric);
 	return (0);
 }
+//2147483647, -2147483648
 */

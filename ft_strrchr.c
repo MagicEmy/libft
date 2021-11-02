@@ -1,10 +1,8 @@
-
-//#include <string.h>
-
-#include <stdio.h>
-
 #include "libft.h"
 /*
+#include <stdio.h>
+#include <string.h>
+
 char *ft_strrchr(const char *s, int c);
 
 int     main(void)
@@ -27,7 +25,6 @@ char *ft_strrchr(const char *s, int c)
 
     temp = NULL;
     len = ft_strlen(s);
-//  printf("test");
     if (c == '\0')
         return ((char *)s + len);
     while (*s != '\0')
