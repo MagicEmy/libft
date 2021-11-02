@@ -13,19 +13,18 @@ char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *string;
-    //unsigned int like_start;
-    size_t  like_len;
+    char            *string;
+    unsigned int    i;
 
-    like_len = len;
-    string = (char *) malloc (sizeof(char) * (len + 1));
+    i = 0;
+    string = (char *) malloc(sizeof(size_t) * (len + 1));
     if (string == NULL)
         return (NULL);
-    while (like_len)
+    while (string[i] && i < len)
     {
-        *string = *(s + start);
-        string++;
-        len--;
+        string[i] = s[i + start];
+        i++;
     }
+    string[i] = '\0';
     return (string);
 }

@@ -39,10 +39,10 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 int	main(void)
 {
 	char    str[15] = "is";
-	char    dest[50] = "What iiiis time?";
+	char    dest[50] = "";
 	char	*letter;
 
-	letter = ft_strstr(dest, str, 4);
+	letter = ft_strnstr(dest, str, 0);
 	printf("%s", letter);
     return (0);
 }

@@ -8,10 +8,16 @@
 void    *ft_calloc(size_t count, size_t size)
 {
 	char	*dest;
+	int		i;
 
-	dest = (char *) malloc (sizeof(size) * count);
+	i = 0;
+	dest = malloc (size * count);
 	if (dest == NULL)
 		return (NULL);
-	memset(dest, 0, count);
+	while (dest[i])
+	{
+		dest[i] = 0;
+		i++;	
+	}
 	return (dest);
 }

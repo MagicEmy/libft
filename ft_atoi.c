@@ -6,9 +6,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int		number;
-	int		sign;
-	int		i;
+	long int	number;
+	int			sign;
+	int			i;
 
 	number = 0;
 	sign = 1;
@@ -28,17 +28,16 @@ int	ft_atoi(const char *str)
 	}
 	return (number * sign);
 }
-
 /*
+//2147483647, -2147483648
 int	main(void)
 {
 	char	*text;
 	int		numeric;
 
-	text = " 	 ---+--+1234ab567";
+	text = " 	 -2147483648ab567";
 	numeric = ft_atoi(text);
 	printf("%d\n", numeric);
 	return (0);
 }
-//2147483647, -2147483648
 */
