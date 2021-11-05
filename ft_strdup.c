@@ -6,22 +6,22 @@ char	*ft_strdup(char *src);
 */
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char    *ft_strdup(const char *s1)
 {
 	int		len;
 	int		i;
 	char	*dest;
 
 	len = 0;
-	while (src[len])
+	while (s1[len])
 		len++;
 	dest = (char *) malloc (sizeof(char) * (len + 1));
 	if (dest == NULL)
 		return (NULL);
 	i = 0;
-	while (src[i] != '\0')
+	while (s1[i] != '\0')
 	{
-		dest[i] = src[i];
+		dest[i] = s1[i];
 		i++;
 	}
 	dest[i] = '\0';

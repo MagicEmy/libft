@@ -18,7 +18,7 @@ int main(void)
     size_t dstsize;
 
     dstsize = sizeof(dst);
-    printf("%s \t %lu", dst, ft_strlcpy(dst, src, 0));
+    printf("%s \t %lu", dst, ft_strlcat(dst, src, 0));
     return (0);
 }
 */

@@ -9,25 +9,24 @@ Allocates (with malloc(3)) and returns a substring from the string ’s’.
 The substring begins at index ’start’ and is of maximum size ’len’.
 */
 #include "libft.h"
-char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
     char            *string;
     unsigned int    i;
     size_t          j;
-    size_t          s_len;
-    
+     
     i = start;
-    j = 0;
-    s_len = ft_strlen(s);
     if (!s)
         return (NULL);
-    if (s_len < start)
-        return (strdup(""));
-    string = (char *)malloc(sizeof (char) * (len + 1));
-    if (!string)
-        return (NULL);
+    if (ft_strlen(s) <= start)
+        return (ft_strdup(""));
+    if (len > ft_strlen(s + start))
+        len = ft_strlen(s + start);
+    string = (char *)malloc(len + 1);
+    if (string == NULL)
+        return (string);
+    j = 0;
     while (s[i] && j < len)
     {
         string[j] = s[i];
