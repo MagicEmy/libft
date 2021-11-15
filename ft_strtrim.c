@@ -8,31 +8,62 @@ from the beginning and the end of the string.
 */
 
 #include "libft.h"
+
+int  ft_check_in_set(char c, char const *set);
+/*
+int main(void)
+{
+    char *s1;
+    char *set;
+
+    s1 = "acbbrutteaacb";
+    set = "abc";
+    
+    printf("%s", ft_strtrim(s1, set));
+    return (0);
+}
+*/
 char    *ft_strtrim(char const *s1, char const *set)
 {
-    size_t front;
-    size_t back;
-    char *set;
-    char *string;
-    int index;
+    int     i;
+    size_t  left;
+    size_t  right;
+    char    *trimmed;
+    
+    left = 0;
+    while ((s1[left]) && (ft_check_in_set(s1[left], set)))
+    {
+        left++;
+    }
+    right = ft_strlen(s1);
+    while (right > left && (ft_check_in_set(s1[right - 1], set)))
+    {
+        right--;
+    }
+    trimmed = (char *)malloc (sizeof (*s1) * (right - left +1));
+    if (!trimmed)
+        return (NULL);
+    i = 0;
+    while (left < right)
+    {
+        trimmed[i] = s1[left];
+        left++;
+        i++;
+    }
+    trimmed[i] = '\0';
+    return (trimmed);
+}
+
+int  ft_check_in_set(char c, char const *set)
+{
     int i;
 
     i = 0;
-    index = 0;
-    front = 0;
-    set = "abc";
-    string = "abbrutteaab";
-    back = ft_strlen(s1);
-    while (string[index])
+    while (set[i])
     {
-        while(set[i])
-        {
-            if (!ft_strchr(&string[front], &set[i]))
-            {
-                front++;
-            }
-            i++;            
-        }
+        if (set[i] == c)
+            return (1);
+        i++;
     }
-    printf("%s", string[front]);
+    return(0);
 }
