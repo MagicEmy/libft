@@ -2,8 +2,8 @@
 
 char	**ft_split(char const *s, char c);
 size_t	ft_sep_count(char const *s, char c);
-void	ft_alloc_copy(char const *s, char c, char **split);
-
+void	ft_alloc_copy(char const *s, char c, char **split, size_t sep);
+void	ft_free_mem(char **split);
 /*
 int	main(void)
 {
@@ -14,7 +14,7 @@ int	main(void)
 
 	c = ' ';
 	cc = 0;
-	s = " ahj a g  ijp m dfn\tvew ngbew sufeowguae brg ";
+	s = " go";
 	ptr = ft_split(s, c);
 	while (ptr[cc])
 		printf("|%s|\n", ptr[cc++]);
@@ -30,23 +30,23 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	sep = ft_sep_count(s, c);
+	printf("%zu\n", sep);
 	split = (char **)ft_calloc((sep + 1), (sizeof(char *)));
 	if (!split)
 		return (NULL);
-	ft_alloc_copy(s, c, split);
+	ft_alloc_copy(s, c, split, sep);
 	return (split);
 }
-/*Allocation of substrings into pointers array */
 
-void	ft_alloc_copy(char const *s, char c, char **split)
+void	ft_alloc_copy(char const *s, char c, char **split, size_t sep)
 {
 	size_t		len;
-	int			index;
+	size_t		index;
 	size_t		i;
 
 	i = 0;
 	index = 0;
-	while (s[i] != '\0')
+	while (index < sep)
 	{
 		len = 0;
 		while (s[i + len] != c && s[i + len] != '\0')
@@ -65,7 +65,6 @@ void	ft_alloc_copy(char const *s, char c, char **split)
 	split[index] = 0;
 }
 
-/*Counting delimiters; strings can be max the number of delimiters +1 */
 size_t	ft_sep_count(char const *s, char c)
 {
 	int		i;
@@ -101,6 +100,6 @@ void	ft_free_mem(char **split)
 }
 /*
 write(1, ">", 1);
-				write(1, &s[i], len);
-				write(1, "<\n", 2);
-				*/
+write(1, &s[i], len);
+write(1, "<\n", 2);
+*/
