@@ -1,23 +1,64 @@
 #include "libft.h"
 
-int	ft_n_count(int	n);
-
+char	*ft_itoa(int n);
+int		ft_n_count(int	n);
+/*
 int	main(void)
 {
 	int		n;
 	char	*string;
 
-	n = 012345;
+	n = 123;
 	string = ft_itoa(n);
 	printf("%s", string);
 }
-
+*/
 char	*ft_itoa(int n)
 {
-	int	num_len;
+	int			num_len;
+	int			number;
+	char		*ptr;
+	int			i;
 
+	number = n;
 	num_len = ft_n_count(n);
-	return ("Magic");
+	i = num_len + 1;
+	ptr = (char *)malloc (sizeof(char) * (i));
+	if (!ptr)
+		return (NULL);
+	if (n < 0)
+	{	
+		ptr[0] = '-';
+		n = n * -1;
+	}
+	if (n == 0)
+	{	
+		ptr[0] = 48;
+		ptr[1] = '\0';
+		return (ptr);
+	}
+	i--;
+	ptr[i] = '\0';
+	i--;
+	if (number < 0)
+	{
+		while (i > 0)
+		{
+			ptr[i] = (n % 10) + '0';
+			n = n / 10;
+			i--;
+		}
+	}
+	else if (number > 0)
+	{
+		while (i >= 0)
+		{
+			ptr[i] = (n % 10) + '0';
+			n = n / 10;
+			i--;
+		}
+	}
+	return (ptr);
 }
 
 int	ft_n_count(int	n)
@@ -25,26 +66,18 @@ int	ft_n_count(int	n)
 	int	len;
 
 	len = 0;
-	printf ("1 n = %d\n", n);
-	if (n == 0)
-		return (1);
 	if (n < 0)
 	{
 		len++;
 		n = n * -1;
 	}
-	printf ("2 n = %d\n", n);
 	while (n / 10)
 	{
 		n = n / 10;
-		printf ("loop n = %d\n", n);
-		printf ("loop len = %d\n", len);
 		len++;
 	}
 	n = n % 10;
 	if (n > 0)
 		len ++;
-	printf ("end n = %d\n", n);
-	printf ("end len = %d\n", len);
 	return (len);
 }
