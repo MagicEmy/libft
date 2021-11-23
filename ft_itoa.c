@@ -8,76 +8,56 @@ int	main(void)
 	int		n;
 	char	*string;
 
-	n = 123;
+	n = -123;
 	string = ft_itoa(n);
 	printf("%s", string);
 }
 */
+
 char	*ft_itoa(int n)
 {
-	int			num_len;
-	int			number;
+	long int	number;
 	char		*ptr;
 	int			i;
 
-	number = n;
-	num_len = ft_n_count(n);
-	i = num_len + 1;
-	ptr = (char *)malloc (sizeof(char) * (i));
+	number = (long int)n;
+	i = ft_n_count(n);
+	ptr = (char *)malloc (sizeof(char) * (i + 1));
 	if (!ptr)
 		return (NULL);
 	if (n < 0)
 	{	
 		ptr[0] = '-';
-		n = n * -1;
+		number = number * -1;
 	}
-	if (n == 0)
-	{	
-		ptr[0] = 48;
-		ptr[1] = '\0';
-		return (ptr);
-	}
-	i--;
-	ptr[i] = '\0';
-	i--;
-	if (number < 0)
+	ptr[i--] = '\0';
+	while (i >= 0)
 	{
-		while (i > 0)
-		{
-			ptr[i] = (n % 10) + '0';
-			n = n / 10;
-			i--;
-		}
-	}
-	else if (number > 0)
-	{
-		while (i >= 0)
-		{
-			ptr[i] = (n % 10) + '0';
-			n = n / 10;
-			i--;
-		}
+		if (n < 0 && i == 0)
+			break ;
+		ptr[i] = (number % 10) + '0';
+		number = number / 10;
+		i--;
 	}
 	return (ptr);
 }
 
 int	ft_n_count(int	n)
 {
-	int	len;
+	long int	number;
+	int			len;
 
 	len = 0;
-	if (n < 0)
+	number = (long)n;
+	if (number <= 0)
 	{
 		len++;
-		n = n * -1;
+		number = number * -1;
 	}
-	while (n / 10)
+	while (number)
 	{
-		n = n / 10;
+		number = number / 10;
 		len++;
 	}
-	n = n % 10;
-	if (n > 0)
-		len ++;
 	return (len);
 }
