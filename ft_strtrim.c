@@ -9,11 +9,11 @@ from the beginning and the end of the string.
 
 #include "libft.h"
 
-int  ft_check_in_set(char c, char const *set);
+int	ft_check_in_set(char c, char const *set);
 /*
 int main(void)
 {
-    char *s1;
+	char *s1;
     char *set;
 
     s1 = "acbbrutteaacb";
@@ -23,47 +23,48 @@ int main(void)
     return (0);
 }
 */
-char    *ft_strtrim(char const *s1, char const *set)
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    int     i;
-    size_t  left;
-    size_t  right;
-    char    *trimmed;
-    
-    left = 0;
-    while ((s1[left]) && (ft_check_in_set(s1[left], set)))
-    {
-        left++;
-    }
-    right = ft_strlen(s1);
-    while (right > left && (ft_check_in_set(s1[right - 1], set)))
-    {
-        right--;
-    }
-    trimmed = (char *)malloc (sizeof (*s1) * (right - left +1));
-    if (!trimmed)
-        return (NULL);
-    i = 0;
-    while (left < right)
-    {
-        trimmed[i] = s1[left];
-        left++;
-        i++;
-    }
-    trimmed[i] = '\0';
-    return (trimmed);
+	int		i;
+	size_t	left;
+	size_t	right;
+	char	*trimmed;
+
+	left = 0;
+	while ((s1[left]) && (ft_check_in_set(s1[left], set)))
+	{
+		left++;
+	}
+	right = ft_strlen(s1);
+	while (right > left && (ft_check_in_set(s1[right - 1], set)))
+	{
+		right--;
+	}
+	trimmed = (char *)malloc (sizeof (*s1) * (right - left + 1));
+	if (!trimmed)
+		return (NULL);
+	i = 0;
+	while (left < right)
+	{
+		trimmed[i] = s1[left];
+		left++;
+		i++;
+	}
+	trimmed[i] = '\0';
+	return (trimmed);
 }
 
-int  ft_check_in_set(char c, char const *set)
+int	ft_check_in_set(char c, char const *set)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (set[i])
-    {
-        if (set[i] == c)
-            return (1);
-        i++;
-    }
-    return(0);
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }

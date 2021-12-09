@@ -4,8 +4,21 @@
 #include <stdlib.h>
 */
 #include "libft.h"
+/*
+int	main(void)
+{
+	char	*src;
 
-void    *ft_calloc(size_t count, size_t size)
+	src = "The Empire strikes back";
+	printf("%s\n", src);
+	src = ft_calloc((ft_strlen(src) + 1), sizeof(char));
+	printf("%d", src[0]);
+	system ("leaks a.out");
+	return (0);
+}
+*/
+
+void	*ft_calloc(size_t count, size_t size)
 {
 	char	*dest;
 	size_t	tot_size;
@@ -19,7 +32,7 @@ void    *ft_calloc(size_t count, size_t size)
 	while (i < tot_size)
 	{
 		dest[i] = 0;
-		i++;	
+		i++;
 	}
 	return (dest);
 }

@@ -2,7 +2,7 @@
 
 char	**ft_split(char const *s, char c);
 size_t	ft_sep_count(char const *s, char c);
-void	ft_alloc_copy(char const *s, char c, char **split, size_t sep);
+int		ft_alloc_copy(char const *s, char c, char **split, size_t sep);
 void	ft_free_mem(char **split);
 /*
 int	main(void)
@@ -14,10 +14,11 @@ int	main(void)
 
 	c = ' ';
 	cc = 0;
-	s = " go";
+	s = "gg   gkgkgkuhi n;jhl g;j; hkg g lkj;k go";
 	ptr = ft_split(s, c);
 	while (ptr[cc])
 		printf("|%s|\n", ptr[cc++]);
+	system ("leaks a.out");
 	return (0);
 }
 */
@@ -30,15 +31,15 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	sep = ft_sep_count(s, c);
-	printf("%zu\n", sep);
 	split = (char **)ft_calloc((sep + 1), (sizeof(char *)));
 	if (!split)
 		return (NULL);
-	ft_alloc_copy(s, c, split, sep);
+	if (ft_alloc_copy(s, c, split, sep))
+		return (0);
 	return (split);
 }
 
-void	ft_alloc_copy(char const *s, char c, char **split, size_t sep)
+int	ft_alloc_copy(char const *s, char c, char **split, size_t sep)
 {
 	size_t		len;
 	size_t		index;
@@ -56,13 +57,17 @@ void	ft_alloc_copy(char const *s, char c, char **split, size_t sep)
 			{
 				split[index] = ft_substr(s, i, len);
 				if (!split[index])
+				{
 					ft_free_mem(split);
+					return (1);
+				}
 				index++;
 			}
 		}
 		i += len + 1;
 	}
 	split[index] = 0;
+	return (0);
 }
 
 size_t	ft_sep_count(char const *s, char c)
@@ -88,13 +93,13 @@ size_t	ft_sep_count(char const *s, char c)
 
 void	ft_free_mem(char **split)
 {
-	int	i;
+	int	c;
 
-	i = 0;
-	while (split[i])
+	c = 0;
+	while (split[c])
 	{
-		free(split[i]);
-		i++;
+		free(split[c]);
+		c++;
 	}
 	free(split);
 }

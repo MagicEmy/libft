@@ -6,16 +6,16 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 */
 #include "libft.h"
 
-char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
+	int		i;
 	size_t	j;
-    char *ocean;
-    char *drop;
+	char	*ocean;
+	char	*drop;
 
 	i = 0;
-    ocean = (char *)haystack;
-    drop = (char *)needle;
+	ocean = (char *) haystack;
+	drop = (char *) needle;
 	if (*needle == '\0')
 	{
 		return ((char *)haystack);
@@ -32,8 +32,8 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 			}
 		}
 		i++;
-    }
-    return (0);
+	}
+	return (0);
 }
 /*
 int	main(void)

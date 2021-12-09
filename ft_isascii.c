@@ -14,10 +14,11 @@ int main(void)
     return (0);
 }
 */
-int ft_isascii(int c)
+
+int	ft_isascii(int h)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    else
-        return (0);
-}   
+	if (h >= 0 && h <= 127)
+		return (1);
+	else
+		return (0);
+}

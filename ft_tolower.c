@@ -15,15 +15,16 @@ int main(void)
     return (0);
 }
 */
-int ft_tolower(int c)
-{
-    int lower;
 
-    if (c >= 'A' && c <= 'Z')
-    {
-        lower = c + 32;
-        return (lower); 
-    } 
-    else
-        return (c);
+int	ft_tolower(int c)
+{
+	int	lower;
+
+	if (c >= 'A' && c <= 'Z')
+	{
+		lower = c + 32;
+		return (lower);
+	}
+	else
+		return (c);
 }

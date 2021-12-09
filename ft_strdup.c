@@ -6,7 +6,7 @@ char	*ft_strdup(char *src);
 */
 #include "libft.h"
 
-char    *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	int		len;
 	int		i;
@@ -39,6 +39,7 @@ int	main(void)
 	printf("%s", dest);
 	redest = strdup(src);
 	printf("%s", redest);
+	system ("leaks a.out");
 	return (0);
 }
 */

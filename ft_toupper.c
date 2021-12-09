@@ -15,15 +15,15 @@ int main(void)
     return (0);
 }
 */
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    int upper;
+	int	upper;
 
-    if (c >= 'a' && c <= 'z')
-    {
-        upper = c - 32;
-        return (upper); 
-    } 
-    else
-        return (c);
+	if (c >= 'a' && c <= 'z')
+	{
+		upper = c - 32;
+		return (upper);
+	}
+	else
+		return (c);
 }
