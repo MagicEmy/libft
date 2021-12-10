@@ -17,9 +17,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	ocean = (char *) haystack;
 	drop = (char *) needle;
 	if (*needle == '\0')
-	{
 		return ((char *)haystack);
-	}
 	while (ocean[i] != '\0' && (size_t)i < len)
 	{
 		j = 0;
@@ -27,9 +25,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			j++;
 			if (drop[j] == '\0')
-			{
 				return ((char *)&haystack[i]);
-			}
 		}
 		i++;
 	}

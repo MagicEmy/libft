@@ -1,7 +1,3 @@
-/*
-#include <string.h>
-#include <stdio.h>
-*/
 #include "libft.h"
 /* size_t  ft_strlcpy(char * restrict dst, \
 const char * restrict src, size_t dstsize);
@@ -21,8 +17,7 @@ int main(void)
 }
 */
 
-size_t	ft_strlcpy(char *restrict dst, \
-const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	char		*d;
 	const char	*s;
@@ -42,18 +37,3 @@ const char *restrict src, size_t dstsize)
 	}
 	return (len);
 }
-/*
-void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
-{
-    const char *s;
-    char *d;
-
-    s = src;
-    d = dst;
-    while (n--)
-    {
-        *d++ = *s++;
-    }
-    return (dst);
-}
-*/

@@ -3,7 +3,7 @@
 char	**ft_split(char const *s, char c);
 size_t	ft_sep_count(char const *s, char c);
 int		ft_alloc_copy(char const *s, char c, char **split, size_t sep);
-void	ft_free_mem(char **split);
+int		ft_free_mem(char **split);
 /*
 int	main(void)
 {
@@ -56,12 +56,8 @@ int	ft_alloc_copy(char const *s, char c, char **split, size_t sep)
 			if (s[i + len] == c || s[i + len] == '\0')
 			{
 				split[index] = ft_substr(s, i, len);
-				if (!split[index])
-				{
+				if (!split[index++])
 					ft_free_mem(split);
-					return (1);
-				}
-				index++;
 			}
 		}
 		i += len + 1;
@@ -91,7 +87,7 @@ size_t	ft_sep_count(char const *s, char c)
 	return (sep);
 }
 
-void	ft_free_mem(char **split)
+int	ft_free_mem(char **split)
 {
 	int	c;
 
@@ -102,6 +98,7 @@ void	ft_free_mem(char **split)
 		c++;
 	}
 	free(split);
+	return (1);
 }
 /*
 write(1, ">", 1);
