@@ -13,13 +13,11 @@ typedef struct s_list
 }t_list;
 */
 #include "libft.h"
+
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst)
+	if (!lst && !del)
 		return ;
-	if (del)
-	{
-		del(lst->content);
-		free (lst);
-	}
+	del(lst->content);
+	free (lst);
 }

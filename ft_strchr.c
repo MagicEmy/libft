@@ -1,24 +1,20 @@
-/*
-#include <string.h>
-#include <stdio.h>
-*/
 #include "libft.h"
 /*
-char    *ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 
-int     main(void)
+int	main(void)
 {
-    int c;
-    const char *s;
+	int			c;
+	const char	*s;
 
-    c = 'u';
-    s = "Bibuba";
-    printf("%s\n", ft_strchr(s, c));
-    printf("%s", strchr(s, c));
-    return (0);
+	c = 'u';
+	s = "Bibuba";
+	printf("|%s|\n", ft_strchr(s, 't' + 256));
+	printf("%s", strchr(s, 't' + 256));
+	system ("leaks a.out");
+	return (0);
 }
 */
-
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;

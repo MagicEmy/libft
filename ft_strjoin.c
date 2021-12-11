@@ -1,6 +1,5 @@
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2);
 /*
 int		main(void)
 {
@@ -18,8 +17,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s1_len;
 	size_t	s2_len;
 	size_t	total_len;
+	size_t	i;
 	char	*new_string;
 
+	i = 0;
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	total_len = s1_len + s2_len + 1;
@@ -28,8 +29,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new_string = (char *)malloc(sizeof(char) * total_len);
 	if (!new_string)
 		return (new_string);
+	while (*s1)
+		new_string[i++] = *s1++;
+	while (*s2)
+		new_string[i++] = *s2++;
+	new_string[i] = '\0';
+	return (new_string);
+}
+
+	/*
 	ft_strlcat(new_string, s1, s1_len);
 	ft_strlcat((new_string + s1_len), s2, s2_len);
 	new_string[total_len - 1] = '\0';
-	return (new_string);
-}
+	*/
