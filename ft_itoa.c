@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_itoa.c                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:09:51 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:10:37 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_itoa(int n);
-int		ft_n_count(int	n);
+int		ft_n_count(int n);
 /*
 int	main(void)
 {
@@ -42,7 +53,7 @@ char	*ft_itoa(int n)
 	return (ptr);
 }
 
-int	ft_n_count(int	n)
+int	ft_n_count(int n)
 {
 	long int	number;
 	int			len;

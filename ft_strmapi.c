@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strmapi.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:17:01 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:17:02 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 /*
 int	main(void)
 {

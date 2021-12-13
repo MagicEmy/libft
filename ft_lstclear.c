@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_lstclear.c                                      :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:11:15 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:11:16 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*Parameters 
 #1. The address of a pointer to an element.

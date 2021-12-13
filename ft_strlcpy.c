@@ -1,8 +1,17 @@
-#include "libft.h"
-/* size_t  ft_strlcpy(char * dst, \
-const char * src, size_t dstsize);
-void    *ft_memcpy(void *dst, const void *src, size_t n);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strlcpy.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:16:17 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:16:34 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
+/*
 int main(void)
 {
     char dst[8] = {0, 0, 0, 0, 0};

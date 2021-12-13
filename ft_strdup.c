@@ -1,9 +1,15 @@
-/*
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-char	*ft_strdup(char *src);
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strdup.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:15:22 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:15:25 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)

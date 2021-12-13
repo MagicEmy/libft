@@ -1,10 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_toupper.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:19:03 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:19:04 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
-#include <stdio.h>
-#include <ctype.h>
-
-int ft_toupper(int c);
-
 int main(void)
 {
     int letter_u;

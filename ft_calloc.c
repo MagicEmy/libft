@@ -1,8 +1,15 @@
-/*
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_calloc.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:07:47 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:08:18 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
 int	main(void)

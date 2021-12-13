@@ -1,9 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_isascii.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:09:24 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:09:26 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
-#include <stdio.h>
-#include <ctype.h>
-int ft_isascii(int c);
-
 int main(void)
 {
     unsigned char ascii;

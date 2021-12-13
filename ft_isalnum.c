@@ -1,8 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_isalnum.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:08:45 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:08:48 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
-#include <stdio.h>
-int ft_isalnum(int c);
-
 int main(void)
 {
     char digit;

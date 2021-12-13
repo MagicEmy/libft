@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_substr.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:18:35 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:18:36 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 #1. The string from which to create the substring. 
 #2. The start index of the substring in the string ’s’.

@@ -1,10 +1,17 @@
-/* DESCRIPTION The bzero() function writes n zeroed bytes to the string s.  
-If n is zero, bzero() does nothing.*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_bzero.c                                         :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 15:01:37 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 15:01:47 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
-#include <string.h>
-#include <stdio.h>
-void    ft_bzero(void *s, size_t n);
 
 int main(void)
 {

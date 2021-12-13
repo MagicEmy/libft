@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_striteri.c                                      :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:15:37 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:15:38 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
-void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 int		main(void)
 {

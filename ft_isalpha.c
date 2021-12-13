@@ -1,7 +1,17 @@
-#include <stdio.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_isalpha.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:08:58 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:09:10 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-int	ft_isalpha(int c);
+
 /*
 int main(void)
 {

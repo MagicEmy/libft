@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_memcpy.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:13:20 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:13:22 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 /*The memcpy() function copies n bytes from memory area src to memory area dst.
 If dst and src overlap, behavior is undefined.
 The memcpy() function returns the original value of dst.	   */
-#include "libft.h"
+
 /*
 int	main(void)
 {

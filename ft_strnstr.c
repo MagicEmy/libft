@@ -1,9 +1,15 @@
-/*
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strnstr.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:17:23 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:17:26 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
-*/
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

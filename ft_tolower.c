@@ -1,10 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_tolower.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:18:51 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:18:52 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
-#include <stdio.h>
-#include <ctype.h>
-
-int ft_tolower(int c);
-
 int main(void)
 {
     int letter_l;

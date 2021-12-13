@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strtrim.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:17:47 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:18:16 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 #1. The string to be trimmed.
 #2. The reference set of characters to trim.
@@ -6,7 +18,6 @@ Description Allocates (with malloc(3)) and returns a copy of
 ’s1’ with the characters specified in ’set’ removed
 from the beginning and the end of the string.
 */
-
 #include "libft.h"
 
 int	ft_check_in_set(char c, char const *set);

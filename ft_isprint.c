@@ -1,9 +1,18 @@
-#include "libft.h"
-/*
-#include <stdio.h>
-#include <ctype.h>
-int ft_isprint(int c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_isprint.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:09:43 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:09:44 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
+
+/*
 int main(void)
 {
 	unsigned char print;

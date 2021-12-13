@@ -1,7 +1,15 @@
-/*
-#include <string.h>
-#include <stdio.h>
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strncmp.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:17:08 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:17:13 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

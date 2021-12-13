@@ -1,8 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strlen.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:16:51 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:16:52 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
-#include <string.h>
-#include <stdio.h>
-size_t  ft_strlen(const char *s);
 
 int main(void)
 {

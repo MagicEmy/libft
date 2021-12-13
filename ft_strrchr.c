@@ -1,9 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strrchr.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 17:17:38 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 17:17:39 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
-#include <stdio.h>
-#include <string.h>
-
-char *ft_strrchr(const char *s, int c);
 
 int	 main(void)
 {

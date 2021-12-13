@@ -1,7 +1,15 @@
-/*
-#include <stdio.h>
-#include <stdlib.h>
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_atoi.c                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/12/13 15:00:36 by emlicame      #+#    #+#                 */
+/*   Updated: 2021/12/13 15:01:22 by emlicame      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_atoi(const char *str)
