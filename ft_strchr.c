@@ -6,7 +6,7 @@
 /*   By: emlicame <emlicame@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 17:15:08 by emlicame      #+#    #+#                 */
-/*   Updated: 2021/12/13 17:15:09 by emlicame      ########   odam.nl         */
+/*   Updated: 2021/12/13 18:50:59 by emlicame      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,14 @@ int	main(void)
 */
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
 	char	*string;
 
-	i = 0;
 	string = (char *)s;
-	while (string[i])
+	while (*string != c)
 	{
-		if (string[i] == c)
-		{
-			return (string + i);
-		}
-		i++;
+		if (*string == '\0')
+			return (NULL);
+		string++;
 	}
-	if (c == '\0')
-		return (string + i);
-	return (NULL);
+	return (string);
 }
