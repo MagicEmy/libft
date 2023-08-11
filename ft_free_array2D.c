@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_atoi.c                                          :+:    :+:            */
+/*   ft_free_array2D.c                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: emlicame <emlicame@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/12/13 15:00:36 by emlicame      #+#    #+#                 */
-/*   Updated: 2023/03/27 17:12:39 by dmalacov      ########   odam.nl         */
+/*   Created: 2023/03/06 14:33:02 by emlicame      #+#    #+#                 */
+/*   Updated: 2023/03/27 17:11:33 by dmalacov      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_free_double_arr(char **arr)
 {
-	long int	number;
-	int			sign;
-	int			i;
+	int	i;
 
-	number = 0;
-	sign = 1;
 	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == ' '))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i++] == '-')
-			sign *= -1;
-	}
-	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
-	{
-		number *= 10;
-		number += (int)str[i] - '0';
-		i++;
-	}
-	return (number * sign);
+	if (arr == NULL)
+		return ;
+	while (arr[i])
+		free(arr[i++]);
+	free (arr);
 }

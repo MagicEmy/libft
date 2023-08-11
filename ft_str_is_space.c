@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_str_is_space.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emlicame <emlicame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 17:14:16 by emlicame          #+#    #+#             */
-/*   Updated: 2023/03/15 11:39:55 by emlicame         ###   ########.fr       */
+/*   Created: 2023/03/09 15:13:38 by emlicame          #+#    #+#             */
+/*   Updated: 2023/03/09 15:14:08 by emlicame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_str_is_space(char *str)
 {
-	write(fd, &c, 1);
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!ft_is_space(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
 }

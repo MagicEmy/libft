@@ -6,13 +6,13 @@
 /*   By: emlicame <emlicame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:14:53 by emlicame          #+#    #+#             */
-/*   Updated: 2023/03/02 15:23:02 by emlicame         ###   ########.fr       */
+/*   Updated: 2023/03/15 11:40:21 by emlicame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_free_mem(char **split)
+int	ft_free_mem_multi(char **split)
 {
 	int	x;
 
@@ -26,7 +26,7 @@ int	ft_free_mem(char **split)
 	return (1);
 }
 
-int	ft_alloc_copy(char const *s, char *set, char **split, size_t w_c)
+int	ft_alloc_copy_multi(char const *s, char *set, char **split, size_t w_c)
 {
 	size_t		len;
 	size_t		index;
@@ -44,7 +44,7 @@ int	ft_alloc_copy(char const *s, char *set, char **split, size_t w_c)
 			{
 				split[index] = ft_substr(s, i, len);
 				if (!split[index++])
-					ft_free_mem(split);
+					ft_free_mem_multi(split);
 			}
 		}
 		i += len + 1;
@@ -83,26 +83,7 @@ char	**ft_split_multi(char const *s, char *set)
 	split = (char **)ft_calloc((w_c + 1), (sizeof(char *)));
 	if (!split)
 		return (NULL);
-	if (ft_alloc_copy(s, set, split, w_c))
+	if (ft_alloc_copy_multi(s, set, split, w_c))
 		return (0);
 	return (split);
-}
-
-int	main(void)
-{
-	char		*set;
-	char const	*s;
-	char		**ptr;
-	int			x;
-
-	set = " \t\v\f\r";
-	x = 0;
-	s = "gg   gkgkgkuhi n	jhl  g	j 	 hkg g lkj k go";
-	ptr = ft_split_multi(s, set);
-	if (!ptr)
-		return (printf ("not ok\n"), 1);
-	while (ptr[x])
-		printf("|%s|\n", ptr[x++]);
-	system ("leaks -q a.out");
-	return (0);
 }
